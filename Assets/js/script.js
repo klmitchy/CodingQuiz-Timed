@@ -1,41 +1,65 @@
-var startBtn = document.querySelector("#start");
-// or
-// var startBtn = document.getElementById("start");
+var StartQuizBtn;
+var StartScreenEl;
+var timerEl;
+var highScoreEl;
+var QuestionEl;
+var questionTitleEl;
+var answerChoicesEl;
 
-var funFactMainEl = document.getElementById("funFactMain");
+var Test = function (answerChoices, questionText, correctAnswer){
 
-// console.log(startBtn);
+}
 
-var timerSec = 5;
+var myTest = new Test ()
+const questionArr
+    - Answer choices;
+    - Question text;
+    - Correct answer;
 
-var funFactArr = [
-    "New car smell is the scent of dozens of chemicals",
-    "The average person walks the equivalent of three times around the world in a lifetime"
+
+
+
+
+/*var startBtn = document.querySelector("#start");
+
+var testQuestions = document.getElementById("Questions");
+
+var timerSec = 75;
+
+var questionsArr = [
+    "What does CSS stand for?",
+    "What is the correct HTML for referring to an external style sheet?",
+    "Where in an HTML document is the correct place to refer to an external style sheet?",
+    "Which is the correct CSS syntax?",
+    "How do you write "Hello World" in an alert box?",
+    "How do you create a function in JavaScript?",
+    "How to write an IF statement for executing some code if "i" is NOT equal to 5?",
+    "How does a FOR loop start?",
+    "How to insert a comment that has more than one line?"
 ]
 
 startBtn.addEventListener("click", function () {
-    // alert("working");
+    
 
-    var funFactTimer = setInterval(function () {
+    var quizTimer = setInterval(function () {
         timerSec--;
         if (timerSec > 0) {
             var pTag = document.createElement("p");
             pTag.textContent = "Time left: " + timerSec;
 
-            var funFactEl = document.createElement("div");
-            funFactEl.textContent = funFactArr[0];
-            // console.log("working timer", timerSec);
+            var testQuestions = document.createElement("div");
+            testQuestions.textContent = questionArr[0];
 
             var nextBtn = document.createElement("button");
             nextBtn.textContent = "Next";
             nextBtn.setAttribute("id", "nextBtn");
 
-            funFactMainEl.innerHTML = "";
-            funFactMainEl.appendChild(pTag);
-            funFactEl.appendChild(nextBtn);
-            funFactMainEl.appendChild(funFactEl);
+            Questions.innerHTML = "";
+            testQuestions.appendChild(pTag);
+            testQuestions.appendChild(nextBtn);
+            Questions.appendChild(funFactEl);
         } else {
-            clearInterval(funFactTimer);
+            clearInterval(quizTimer);
             alert("Time is up!");
         }
     }, 1000);
@@ -43,23 +67,22 @@ startBtn.addEventListener("click", function () {
 })
 
 document.getElementById("funFactMain").addEventListener("click", function (event) {
-    // alert("working next", );
     console.log(event.target.id);
 
     var pTag = document.createElement("p");
     pTag.textContent = "Time left: " + timerSec;
     
-    var funFactEl = document.createElement("div");
-    funFactEl.textContent = funFactArr[1];
+    var testQuestions = document.createElement("div");
+    testQuestions.textContent = questionArr[1];
 
     var nextBtn = document.createElement("button");
     nextBtn.textContent = "Next";
     nextBtn.setAttribute("id", "nextBtn");
 
-    funFactMainEl.innerHTML = "";
-    funFactMainEl.appendChild(pTag);
-    funFactEl.appendChild(nextBtn);
-    funFactMainEl.appendChild(funFactEl);
+    testQuestions.innerHTML = "";
+    testQuestions.appendChild(pTag);
+    testQuestions.appendChild(nextBtn);
+    Questions.appendChild(funFactEl);
 })
 
 
