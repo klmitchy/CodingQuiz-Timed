@@ -11,16 +11,22 @@ var Test = function (answerChoices, questionText, correctAnswer){
 }
 
 var myTest = new Test ()
-const questionArr
+
+/*const questionArr
     - Answer choices;
     - Question text;
     - Correct answer;
 
 
+// to set to local storage:
+    /*localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    renderLastRegistered();*/
 
 
 
-/*var startBtn = document.querySelector("#start");
+
+var startBtn = document.querySelector("#START");
 
 var testQuestions = document.getElementById("Questions");
 
@@ -38,9 +44,10 @@ var questionsArr = [
     "How to insert a comment that has more than one line?"
 ]
 
+//start quiz at start button click:
 startBtn.addEventListener("click", function () {
+    startBtn.getElementsByClassName.visibility="hidden";
     
-
     var quizTimer = setInterval(function () {
         timerSec--;
         if (timerSec > 0) {
@@ -61,6 +68,7 @@ startBtn.addEventListener("click", function () {
         } else {
             clearInterval(quizTimer);
             alert("Time is up!");
+            displayScore();
         }
     }, 1000);
 

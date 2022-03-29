@@ -4,40 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Coding Quiz</title>
 </head>
 <body>
 
-    <Header>
-        Coding Quiz Challenge!
-     </Header>
+<Nav>Coding Quiz Challenge!</Nav>
 
-     <h2>The timer starts when you click the button.  You will be 
-        presented with a series of coding questions.
-        Answer correctly to move on.  
-        Answer incorrectly and 10 seconds will be subtracted
-        from the clock. Oh no!
-        WHEN all questions are answered or the timer reaches 0
-        the game is over.  You can then check your score.</h2>
+<header>The timer starts when you click the button.  You will be 
+    presented with a series of coding questions.
+    Answer correctly to move on.  
+    Answer incorrectly and 10 seconds will be subtracted
+    from the clock. Oh no!
+    WHEN all questions are answered or the timer reaches 0
+    the game is over.  You can then check your score.</header>
  
-    <button id="start">Start Coding Quiz!</button>
+<button id="StartQuizBtn" class ="btn btn-primary btn-lg">Start Coding Quiz!</button>
 
-    <div id="question screen container">
+<div id="question-screen-container">
+        <!-- Content here -->
 
         <h1>Question</h1>
 
         <h2>data-set:</h2>
 
-        <form button="/action_page.php">
-            <p><data-></data-></p>
-            <input type="radio" id="Option1" > <br>
-            <input type="radio" id="Option2" > <br>
-            <input type="radio" id="Option3" > <br>
-
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
+          </div>
     </div>
     
-    <div id = "Timer"></div>
+    <div id = "Timer">
+
+
+    </div>
 
 
 
