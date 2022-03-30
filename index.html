@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Coding Quiz</title>
 </head>
-<body>
+<body
 
 <Nav>Coding Quiz Challenge!</Nav>
 
@@ -25,35 +25,42 @@
 <div id="question-screen-container">
         <!-- Content here -->
 
-        <h1 class="Question"</h1>
+        <h1="Question"</h1>
 
-        <h2 class="data-set:</h2>
+        <h2="data-set:</h2>
 
-        <div class="custom-control custom-radio">
+        <div class = "custom-control custom-radio" id = "choice A">
             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
             <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
           </div>
-          <div class="custom-control custom-radio">
+          <div class="custom-control custom-radio" id = "choice B">
             <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
             <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
           </div>
-          <div class="custom-control custom-radio">
+          <div class="custom-control custom-radio" id = "choice C">
             <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
             <label class="custom-control-label" for="customRadio3">Toggle this custom radio</label>
           </div>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-            <label class="custom-control-label" for="customRadio4">Or toggle this other custom radio</label>
-          </div>
+          
     </div>
     
     <div id = "Timer">
 
-
     </div>
+
+    <div id = "End of Game Container" >
+      <form action="/action_page.php">
+        <label for="fname">Enter Your Initials:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <input type="submit" value="Submit">
+      </form> 
+    </div>
+      
 
 
 
 
 <script src="./assets/js/script.js"></script>
+
+<script src="./assets/js/quizquestions.js"></script>
 </html>

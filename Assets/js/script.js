@@ -1,10 +1,10 @@
-var StartQuizBtn;
+var StartQuizBtn = document.querySelector("#StartQuizBtn");
 var StartScreenEl;
-var timerEl;
+var timerEl = document.querySelector("#Timer");
 var highScoreEl;
-var QuestionEl;
-var questionTitleEl;
-var answerChoicesEl;
+var QuestionEl = document.querySelector(QuestionsArr);
+var questionTitleEl = document.querySelector(h2);
+var answerChoicesEl = document.querySelector["#choice A", "#choice B", "#choice C"];
 
 var Test = function (answerChoices, questionText, correctAnswer){
 
@@ -12,32 +12,46 @@ var Test = function (answerChoices, questionText, correctAnswer){
 
 var myTest = new Test ()
 
-var QuestionsArr = [
-{
-    question: "What does CSS stand for?",
-    answers: [
-        "Computer Style Sheets",
-        "Cascading Style Sheets",
-        "Creative Style Sheets"
-    ],
-    correctAnswer: "alert"
+question-screen-container.style.display = "none"
+question-screen-container.style.display = "visible"
 
-},
 
-{
-    question: "Where in an HTML document is the correct place to refer to an external style sheet?",
-    answers: [
-        "in the <head> section",
-        "in the <body> section",
-        "at the end of the document"
-    ],
-    correctAnswer: "alert"
-},
+var questionIndex = 0;
 
-{
-    question: ""
+function showQuestion(index) {
+    questionIndex.textContent = ""
+    userChoice.textContent = ""
+    for (var i = 0; i < questions.length; i++) {
+        var Q= (questions[index].answers)
+        questionIndex.textContent = Q
+    }
+    answerList.forEach(function(ans) {
+        var answerButton= document.createElement("button");
+        answerButton.style.position = "inline";
+        answerButton.style.alignContent = "center";
+        answerButton.style.padding = "15px";
+
+        answerButton.classList.add(answerButton)
+        answerButton.addEventListener('click'), function () {
+            ansCheck(answerButton.textContent)
+        })
+    })
+
+
 }
-]
+
+var answerCheck = document.createElement("h3")
+function answerCheck(answer) {
+    if (answer === questions [questionIndex].correctAnswer){
+        console.log ("Correct!")
+        answerCheck.textContent = "CORRECT!"
+
+    }
+    else {
+        console.log("incorrect")
+        answerCheck.textContent = "Too Bad"
+    }
+}
 
 // code to set to local storage:
     /*localStorage.setItem("email", email);
@@ -53,21 +67,10 @@ var testQuestions = document.getElementById("Questions");
 
 var timerSec = 75;
 
-/*var questionsArr = [
-    "What does CSS stand for?",
-    "What is the correct HTML for referring to an external style sheet?",
-    "Where in an HTML document is the correct place to refer to an external style sheet?",
-    "Which is the correct CSS syntax?",
-    "How do you write "//Hello World" in an alert box?",
-    "How do you create a function in JavaScript?",
-    "How to write an IF statement for executing some code if "i" is NOT equal to 5?",
-    "How does a FOR loop start?",
-    "How to insert a comment that has more than one line?"*/
-
 
 //start quiz at start button click:
 startQuizBtn.addEventListener("click", function () {
-    //startBtn.getElementsByClassName//visibility="hidden";
+    startQuizBtn.getElementsByClassName//visibility="hidden";
     
     var quizTimer = setInterval(function () {
         timerSec--;
@@ -75,7 +78,7 @@ startQuizBtn.addEventListener("click", function () {
             var pTag = document.createElement("p");
             pTag.textContent = "Time left: " + timerSec;
 
-            var testQuestions = document.createElement("div");
+            var = document.createElement("div");
             testQuestions.textContent = questionArr[0];
 
             var nextBtn = document.createElement("button");
@@ -85,7 +88,7 @@ startQuizBtn.addEventListener("click", function () {
             Questions.innerHTML = "";
             testQuestions.appendChild(pTag);
             testQuestions.appendChild(nextBtn);
-            Questions.appendChild(funFactEl);
+            Questions.appendChild();
         } else {
             clearInterval(quizTimer);
             alert("Time is up!");
@@ -95,24 +98,6 @@ startQuizBtn.addEventListener("click", function () {
 
 })
 
-document.getElementById("funFactMain").addEventListener("click", function (event) {
-    console.log(event.target.id);
-
-    var pTag = document.createElement("p");
-    pTag.textContent = "Time left: " + timerSec;
-    
-    var testQuestions = document.createElement("div");
-    testQuestions.textContent = questionArr[1];
-
-    var nextBtn = document.createElement("button");
-    nextBtn.textContent = "Next";
-    nextBtn.setAttribute("id", "nextBtn");
-
-    testQuestions.innerHTML = "";
-    testQuestions.appendChild(pTag);
-    testQuestions.appendChild(nextBtn);
-    Questions.appendChild(funFactEl);
-})
 
 
 
