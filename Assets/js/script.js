@@ -25,7 +25,7 @@ JS
 var StartQuizBtn = document.querySelector("#StartQuizBtn");
 var StartScreenEl=document.querySelector("header");
 var timerEl = document.querySelector("#Timer");
-var highScoreEl;
+var highScoreEl; //will be assigned later on
 var QuestionEl = document.querySelector("#question-screen-container");
 var questionTitleEl = document.querySelector("#question-title");
 var answerChoicesEl = document.querySelector("#answers");
@@ -36,77 +36,88 @@ var answerChoicesEl = document.querySelector("#answers");
  //   - Question text
 //    - Correct answer
 
-3. Create a startQuiz() function trigerred by the StartQuizBtn
-    -Hide start screen
-    -Unhide questions screen
-    -Starts timer
-    -Grab first question in the array
+//array is in assets./quizquestions.js
 
-4. Create a function to getQuestion()
-    - Renders title, choices and buttons
+//3. Create a startQuiz() function trigerred by the StartQuizBtn:
 
-5. Create a function to check if an answer is correctly
-    -If the answer is correct, then move on to the next question
-    -If answer is wrong, decrement timer and move on to next question
-    -Keep track of score/points
-    -Increment index in array of questions to move on
+function startQuiz ()
+startQuizBtn.addEventListener("click", function () {
 
-6. Create a function to end the quiz
-    -Hide this QuestionEl
-    -Unhide the End of quiz element
+    //Hide start screen:
+
+    var StartScreenEl
+
+    //Unhide questions screen:
+
+    var QuestionEl
+
+    //Starts timer:
+
+   var timerEl
+
+    //Grab first question in the array:
+
+    //grab [0] from quizuestions.js
+
+/*4. Create a function to getQuestion()
+    - Renders title, choices and buttons*/
+
+     //display var questionTitleEl and var answerChoicesEl 
+     //create element buttons for the answers?
+
+//5. Create a function to check if an answer is correct
+
+    function correctAswer () {
+
+    }
+
+//If the answer is correct, then move on to the next question
+
+    if ( chosenAnswer = true) {
+    //LOOP through to the next question
+
+    }    
+
+//-If answer is wrong, decrement timer and move on to next question
+
+    else ( chosenAnswer ! = true) {
+    //decrease timer 10 seconds
+    //loop to the next question
+    }
+    
+//Keep track of score/points
+
+    function keepScore () {
+    if (chosen answer = true) {
+        increment score 1++
+    }   
+    else (chosen answer ! = true) {
+        //return? do not add to score
+    }
+    }
+
+//Increment index in array of questions to move on*/:
+
+    //not sure what this means?? - ask Omar
+
+//6. Create a function to end the quiz
+
+    function endQuiz ()
+
+//Hide this QuestionEl
+
+    var QuestionEl 
+    style = hidden //?
+
+//Unhide the End of quiz element
+
+    var finishQuizEl = document.querySelector(#"End of Game Container");
+
     -Unhide your final score element, form, submit btn
 
 7. Create functionality to save high scores to localStorage */
 
 
-
-var test = function (answerChoices, questionText, correctAnswer){
-
-}
-
-
-
-//question-screen-container.style.display = "none"
-//question-screen-container.style.display = "visible"
-
-
-var questionIndex = 0;
-
-function showQuestion(index) {
-    questionIndex.textContent = ""
-    userChoice.textContent = ""
-    for (var i = 0; i < questions.length; i++) {
-        var Q= (questions[index].answers)
-        questionIndex.textContent = Q
-    }
-
-    answerList.forEach(function(ans) {
-        var answerButton= document.createElement("button");
-        answerButton.style.position = "inline";
-        answerButton.style.alignContent = "center";
-        answerButton.style.padding = "15px";
-
-        answerButton.classList.add(answerButton)
-        answerButton.addEventListener('click', function () {
-            ansCheck(answerButton.textContent)
-        })
-    }
-
-
-}
-
-var answerCheck = document.createElement("h3")
-function answerCheck(answer) {
-    if (answer === questions [questionIndex].correctAnswer){
-        console.log ("Correct!")
-        answerCheck.textContent = "CORRECT!"
-
-    }
-    else {
-        console.log("incorrect")
-        answerCheck.textContent = "Too Bad"
-    }
-}
 
 // code to set to local storage:
     /*localStorage.setItem("email", email);
@@ -124,7 +135,7 @@ var timerSec = 75;
 
 
 //start quiz at start button click:
-startQuizBtn.addEventListener("click", function () {
+
     startQuizBtn.getElementsByClassName//visibility="hidden";
     
     var quizTimer = setInterval(function () {
