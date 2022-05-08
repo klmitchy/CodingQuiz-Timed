@@ -40,24 +40,30 @@ var answerChoicesEl = document.querySelector("#answers");
 
 //3. Create a startQuiz() function trigerred by the StartQuizBtn:
 
-function startQuiz ()
-startQuizBtn.addEventListener("click", function () {
 
+var startQuiz = function () {
+    StartScreenEl.style.display="none";
     //Hide start screen:
 
-    var StartScreenEl
+    //var StartScreenEl
 
     //Unhide questions screen:
-
-    var QuestionEl
+    console.log(QuestionsArr[0].question);
+    console.log(QuestionsArr[0].answers);
+   // var QuestionEl //& question screen container
 
     //Starts timer:
 
-   var timerEl
+  // var timerEl
 
     //Grab first question in the array:
 
     //grab [0] from quizuestions.js
+
+}
+
+StartQuizBtn.addEventListener("click", startQuiz);
+
 
 /*4. Create a function to getQuestion()
     - Renders title, choices and buttons*/
@@ -67,27 +73,27 @@ startQuizBtn.addEventListener("click", function () {
 
 //5. Create a function to check if an answer is correct
 
-    function correctAswer () {
+   // function correctAswer () {
 
-    }
+  //  }
 
 //If the answer is correct, then move on to the next question
 
-    if ( chosenAnswer = true) {
+  //  if ( chosenAnswer = true) {
     //LOOP through to the next question
 
-    }    
+  //  }    
 
 //-If answer is wrong, decrement timer and move on to next question
 
-    else ( chosenAnswer ! = true) {
+  // else ( chosenAnswer ! = true) {
     //decrease timer 10 seconds
     //loop to the next question
-    }
+//}
     
 //Keep track of score/points
 
-    function keepScore () {
+    /*function keepScore () {
     if (chosen answer = true) {
         increment score 1++
     }   
@@ -96,75 +102,75 @@ startQuizBtn.addEventListener("click", function () {
     }
     }
 
-//Increment index in array of questions to move on*/:
+//Increment index in array of questions to move on*/
 
     //not sure what this means?? - ask Omar
 
 //6. Create a function to end the quiz
 
-    function endQuiz ()
+    // function endQuiz ()
 
 //Hide this QuestionEl
 
-    var QuestionEl 
-    style = hidden //?
+//     var QuestionEl 
+//     style = hidden //?
 
-//Unhide the End of quiz element
+// //Unhide the End of quiz element
 
-    var finishQuizEl = document.querySelector(#"End of Game Container");
+//     var finishQuizEl = document.querySelector(#"End of Game Container");
 
-    -Unhide your final score element, form, submit btn
+// //Unhide your final score element, form, submit btn 
 
-7. Create functionality to save high scores to localStorage */
+//     var finalScore = document.querySelector()//do i need to build this in html?
 
-
-
-// code to set to local storage:
-    /*localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    renderLastRegistered();*/
+// //Create functionality to save high scores to localStorage 
 
 
 
-
-var startQuizBtn = document.querySelector("#StartQuizBtn");
-
-var testQuestions = document.getElementById("Questions");
-
-var timerSec = 75;
+// // code to set to local storage:
+//     /*localStorage.setItem("initials", email);
+//     localStorage.setItem("highScore", highScore);
+//     renderLastRegistered();*/
 
 
-//start quiz at start button click:
 
-    startQuizBtn.getElementsByClassName//visibility="hidden";
+
+// var testQuestions = document.getElementById("Questions");
+
+// var timerSec = 75;
+
+
+// /*/start quiz at start button click:
+
+//     startQuizBtn.getElementsByClassName//visibility="hidden";
     
-    var quizTimer = setInterval(function () {
-        timerSec--;
-        if (timerSec > 0) {
-            var pTag = document.createElement("p");
-            pTag.textContent = "Time left: " + timerSec;
+//     var quizTimer = setInterval(function () {
+//         timerSec--;
+//         if (timerSec > 0) {
+//             var pTag = document.createElement("p");
+//             pTag.textContent = "Time left: " + timerSec;
 
-            var = document.createElement("div");
-            testQuestions.textContent = questionArr[0];
+//             var = document.createElement("div");
+//             testQuestions.textContent = questionArr[0];
 
-            var nextBtn = document.createElement("button");
-            nextBtn.textContent = "Next";
-            nextBtn.setAttribute("id", "nextBtn");
+//             var nextBtn = document.createElement("button");
+//             nextBtn.textContent = "Next";
+//             nextBtn.setAttribute("id", "nextBtn");
 
-            Questions.innerHTML = "";
-            testQuestions.appendChild(pTag);
-            testQuestions.appendChild(nextBtn);
-            Questions.appendChild();
-        } else {
-            clearInterval(quizTimer);
-            alert("Time is up!");
-            displayScore();
-        }
-    }, 1000);
+//             Questions.innerHTML = "";
+//             testQuestions.appendChild(pTag);
+//             testQuestions.appendChild(nextBtn);
+//             Questions.appendChild();
+//         } else {
+//             clearInterval(quizTimer);
+//             alert("Time is up!");
+//             displayScore();
+//         }
+//     }, 1000);
 
-})
+// })
 
-
+// */
 
 
 
